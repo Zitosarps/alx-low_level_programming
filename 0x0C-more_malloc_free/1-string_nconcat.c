@@ -13,7 +13,7 @@ int _strlen(char *s);
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int j, len, count;
+	unsigned int i, len, count;
 	char *ptr;
 
 	if (s1 == NULL)
@@ -36,13 +36,28 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr[count] = s1[count];
 		count++;
 	}
-	j = 0;
-	while (s2[j] != '\0' && j < n)
+	i = 0;
+	while (s2[i] != '\0' && i < n)
 	{
-		ptr[count] = s2[j];
+		ptr[count] = s2[i];
 		count++;
-		j++;
+		i++;
 	}
 	ptr[count] = '\0';
 	return (ptr);
+}
+
+/**
+ * _strlen - Returns the length of a string
+ * @s: The given string
+ *
+ * Return: The length of the string
+ */
+int _strlen(char *s)
+{
+	int total;
+
+	for (total = 0; s[total] != '\0'; total++)
+		;
+	return (total);
 }
