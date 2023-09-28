@@ -8,9 +8,9 @@
  */
 void print_binary(unsigned long int decimal_number)
 {
-    if (decimal_number > 0)
+    if (decimal_number >> 0)
     {
-        if (decimal_number > 1)
+        if (decimal_number >> 1)
             print_binary(decimal_number >> 1);
         _putchar((decimal_number & 1) + '0');
     }
