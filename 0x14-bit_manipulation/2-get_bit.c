@@ -9,9 +9,9 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-    if (index < 64)
-    {
-        unsigned int i;
+       unsigned int i;
+
+	if (index < 64)
 
         for (i = 0; i <= index; n >>= 1, i++)
         {
